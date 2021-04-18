@@ -37,7 +37,7 @@ import Logger.AppLog;
 public class GuiModel extends JFrame {
 	
 	private AppLog log;
-	private static  Logger LOGGER;
+	private static  org.apache.log4j.Logger LOGGER;
 	private JFileChooser fileChooser;
 	private JFileChooser fileChooserLibs;
 	
@@ -75,6 +75,7 @@ public class GuiModel extends JFrame {
 	
 	private void initComps() {
 		
+		colors = new ColorsApp();
 		jPanelLevel1 = new JPanel();
 		jPanelLevel2 = new JPanel();
 		jPanelLevel3 = new JPanel();
@@ -87,9 +88,7 @@ public class GuiModel extends JFrame {
         jPanelLevel2.setBackground(colors.greyL1);
         jPanelLevel3.setBackground(colors.greyL1);
 		
-		menu = createMenu();
-		
-		
+				
 		fileChooser = new JFileChooser();
 		fileChooserLibs = new JFileChooser();
 		
@@ -118,6 +117,11 @@ public class GuiModel extends JFrame {
             	loadLibButtonActionPerformed(evt);
             }
         });
+		
+		jScrollPaneSelectFile1 = new JScrollPane();
+		jTextAreaSelectFile1 = new JTextArea();
+		jScrollPaneTask1 = new JScrollPane();
+		jTextAreaTask1 = new JTextArea();
 		
 		jScrollPaneSelectFile1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPaneSelectFile1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
@@ -259,21 +263,6 @@ public class GuiModel extends JFrame {
 		
 	}
 
-	/**
-	 * 
-	 * @return
-	 */
-	private JMenuBar createMenu() {
-		JMenuBar mb = new JMenuBar();
-		JMenu m1 = new JMenu("Help");
-		JMenuItem m1Item = new JMenuItem("How to use?");
-		m1.add(m1Item);
-		mb.add(m1);
-		
-		return mb;
-		
-		
-	}
 
 
 }

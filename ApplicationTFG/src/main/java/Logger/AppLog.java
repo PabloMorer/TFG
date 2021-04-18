@@ -1,13 +1,12 @@
 package Logger;
 
 
-import com.sun.org.slf4j.internal.Logger;
-import com.sun.org.slf4j.internal.LoggerFactory;
+import org.apache.log4j.Logger;
 
-import Gui.GuiModel;
+
 
 public class AppLog {
-	private static final Logger LOGGER = LoggerFactory.getLogger(AppLog.class);
+	private static final Logger LOGGER = Logger.getLogger(AppLog.class);
 	
 	public AppLog() {
 		
