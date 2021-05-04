@@ -2,9 +2,13 @@ package Controller;
 
 import java.io.File;
 
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
 import org.apache.commons.io.FilenameUtils;
 
-import Gui.GuiModel;
+import Gui.AppGui;
+import Gui.MenuPanel;
 import Logger.AppLog;
 
 public class Controller {
@@ -12,6 +16,8 @@ public class Controller {
 	private File mpiFile;
 	private File[] mpiLibFiles;
 	private AppLog LOGGER;
+	private AppGui GUI;
+	private int nProc;
 	
 	public Controller(AppLog LOG) {
 		this.LOGGER = LOG;
@@ -24,7 +30,7 @@ public class Controller {
 		return "h".equals(FilenameUtils.getExtension(file.getName()));
 	}
 	public void initGui() {
-		GuiModel gui = new GuiModel(this);
+		this.GUI = new AppGui(this);
 	}
 	public void setMPIFile(File file) {
 		this.mpiFile = file;
@@ -44,5 +50,19 @@ public class Controller {
 	public AppLog getLogger() {
 		return this.LOGGER;
 	}
+	public void initSocket() {
+		
+	}
+
+	public void setNProc(int nProc) {
+		this.nProc = nProc;	
+	}
+	public int getNProc() {
+		return this.nProc;
+	}
+	
+
+
+
 
 }

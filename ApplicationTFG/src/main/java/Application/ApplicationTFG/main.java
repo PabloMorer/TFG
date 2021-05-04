@@ -1,7 +1,7 @@
 package Application.ApplicationTFG;
 
 import Controller.Controller;
-import Gui.GuiModel;
+import Gui.MenuPanel;
 import Logger.AppLog;
 
 /**
@@ -13,16 +13,16 @@ public class main {
 	
 	private static Controller controller;
 	private static AppLog LOG;
-	private static GuiModel Gui;
+	private static MenuPanel Gui;
 	/**
 	 * Main application
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		
-		LOG = new AppLog();
-		controller = new Controller(LOG);
-		controller.initGui();
+		LOG = new AppLog(); //Init Logger
+		controller = new Controller(LOG); //INit Controller
+		controller.initGui(); //Init Gui
 		
 	}
 }
