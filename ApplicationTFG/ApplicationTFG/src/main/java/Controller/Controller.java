@@ -10,6 +10,7 @@ import org.apache.commons.io.FilenameUtils;
 import Gui.AppGui;
 import Gui.MenuPanel;
 import Logger.AppLog;
+import Sockets.Client;
 
 public class Controller {
 
@@ -17,6 +18,8 @@ public class Controller {
 	private File[] mpiLibFiles;
 	private AppLog LOGGER;
 	private AppGui GUI;
+	private String nProc;
+	private int numLibFiles;
 	
 	public Controller(AppLog LOG) {
 		this.LOGGER = LOG;
@@ -48,6 +51,32 @@ public class Controller {
 	
 	public AppLog getLogger() {
 		return this.LOGGER;
+	}
+	public void initSocket() {
+		Client c = new Client(this);
+	}
+
+	public void setNProc(String nProc) {
+		this.nProc = nProc;	
+	}
+	public String getNProc() {
+		return this.nProc;
+	}
+	public String[] getNameLibs() {
+		String[] names = new String[this.mpiLibFiles.length];
+		
+		for(int i = 0; i < this.mpiLibFiles.length; i++) {
+			names[i] = this.mpiLibFiles[i].getName();
+		}
+		return names;
+			
+	}
+
+	public void setNumLibFiles(int i) {
+		this.numLibFiles = i;	
+	}
+	public int getNumLibFiles() {
+		return this.numLibFiles;
 	}
 	
 
