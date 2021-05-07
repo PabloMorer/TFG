@@ -23,8 +23,10 @@ import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import javax.swing.JSpinner;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.SpinnerNumberModel;
 import javax.swing.filechooser.FileSystemView;
 
 import com.sun.org.slf4j.internal.Logger;
@@ -216,6 +218,8 @@ public class MenuPanel extends JPanel {
     	//String numWorkers =  (String) JOptionPane.showInputDialog(null, "Choose number of workers" , "Maximum Width", JOptionPane.QUESTION_MESSAGE, null, optionsChartWidth, optionsChartWidth[0]);
     	String numRanks = JOptionPane.showInputDialog("Elija el número de Workers a ejecutar", null);
 		//if(!widthChoose.equals("Automatic") )maxWidth = Integer.parseInt(widthChoose);
+    	
+
    		this.controller.setNProc(numRanks);  			
 		controller.initSocket();
 	}
