@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2021-05-14T22:49:57.576519206Z</date>
+  <millis>1621032597576</millis>
+  <nanos>519206</nanos>
+  <sequence>0</sequence>
+  <logger>Logger.AppLog</logger>
+  <level>CONFIG</level>
+  <class>Logger.AppLog</class>
+  <method>&lt;init&gt;</method>
+  <thread>1</thread>
+  <message>Config done.</message>
+</record>
+<record>
+  <date>2021-05-14T22:49:57.726321538Z</date>
+  <millis>1621032597726</millis>
+  <nanos>321538</nanos>
+  <sequence>1</sequence>
+  <logger>Logger.AppLog</logger>
+  <level>INFO</level>
+  <class>Logger.AppLog</class>
+  <method>&lt;init&gt;</method>
+  <thread>1</thread>
+  <message>LOGGER FINER</message>
+</record>
+</log>
