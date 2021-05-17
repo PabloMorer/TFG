@@ -2,9 +2,9 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2021-05-14T22:49:57.576519206Z</date>
-  <millis>1621032597576</millis>
-  <nanos>519206</nanos>
+  <date>2021-05-17T22:01:11.491269811Z</date>
+  <millis>1621288871491</millis>
+  <nanos>269811</nanos>
   <sequence>0</sequence>
   <logger>Logger.AppLog</logger>
   <level>CONFIG</level>
@@ -14,9 +14,9 @@
   <message>Config done.</message>
 </record>
 <record>
-  <date>2021-05-14T22:49:57.726321538Z</date>
-  <millis>1621032597726</millis>
-  <nanos>321538</nanos>
+  <date>2021-05-17T22:01:11.672508252Z</date>
+  <millis>1621288871672</millis>
+  <nanos>508252</nanos>
   <sequence>1</sequence>
   <logger>Logger.AppLog</logger>
   <level>INFO</level>
